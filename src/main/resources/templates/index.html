@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon"  th:href="@{Images/coder.ico}" type="image/x-icon" />
+    <link rel="shortcut icon"  th:href="@{Images/coder.ico}" type="image/x-icon" />
+    <link rel="bookmark"  th:href="@{Images/coder.ico}" type="image/x-icon" />
+    <link th:src="@{bootstrap/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:src="@{jquery/jquery-2.1.1.min.js}" type="text/javascript"/>
+    <link th:src="@{bootstrap/js/bootstrap.js}" type="text/javascript"/>
+</head>
+<body>
+    <p th:text="${book.name}+${book.title}"></p>
+    <button th:onclick="'javascript:hello(\''+${book.name}+'\')'" >测试</button>
+<script>
+    function hello(a) {
+        alert(a);
+    }
+</script>
+</body>
+</html>
